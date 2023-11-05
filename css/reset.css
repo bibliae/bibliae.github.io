@@ -20,12 +20,6 @@ figure, blockquote, dl, dd {
     margin-block-end: 0;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-    list-style: none;
-}
-
 /* Set core body defaults */
 body {
     min-height: 100vh;
@@ -71,4 +65,8 @@ textarea:not([rows]) {
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
     scroll-margin-block: 5ex;
+}
+
+li {
+    list-style-type: none;
 }

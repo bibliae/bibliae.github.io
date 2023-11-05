@@ -18,8 +18,12 @@ body main {
     flex-grow: 2;
 }
 
-h1 {
+h1, h2 {
     margin-bottom: 1em;
+}
+
+h2 {
+    margin-top: 2em;
 }
 
 p + p {
@@ -30,3 +34,29 @@ p + p {
     color: transparent;
     text-shadow: 0 0 #000;
 }
+
+.projectList {
+    margin: 1em 0;
+}
+
+.projectList a, .projectList.planned li {
+    display: block;
+    text-decoration: none;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin: -5px;
+    padding: 1em;
+}
+
+.projectList a:hover {
+    box-shadow: 0 0 10px #000000aa;
+}
+
+.projectList.planned li {
+    border-color: #aaa;
+}
+
+.projectList h2 {
+    margin-top: 0;
+}
+
