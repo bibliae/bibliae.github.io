@@ -57,7 +57,15 @@ table tr:nth-child(2n) {
 }
 
 table tr:hover {
-    background-color: #dee7f8;
+    background-color: rgb(41, 151, 255);
+}
+
+table tr:hover td {
+    color: #fff;
+}
+
+table tr:hover a::after {
+    filter: invert(100%);
 }
 
 input[type=text] {
@@ -92,4 +100,8 @@ input[type=text]:focus {
 #results a:hover {
     background-color: rgb(41, 151, 255);
     color: #fff;
+}
+
+#results a:hover::after {
+    filter: invert(100%);
 }
