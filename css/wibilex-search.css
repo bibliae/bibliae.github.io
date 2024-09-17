@@ -34,6 +34,10 @@ table {
     margin: 1em -0.5em 0;
 }
 
+tr {
+    position: relative;
+}
+
 th {
     text-align: left;
     position: sticky;
@@ -68,6 +72,16 @@ table tr:hover a::after {
     filter: invert(100%);
 }
 
+table a::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 input[type=text] {
     border: 1px solid #000;
     width: 100%;
@@ -97,11 +111,11 @@ input[type=text]:focus {
     padding: 0.5em;
 }
 
-#results a:hover {
+#results a:hover, #results .active a {
     background-color: rgb(41, 151, 255);
     color: #fff;
 }
 
-#results a:hover::after {
+#results a:hover::after, #results .active a::after {
     filter: invert(100%);
 }
