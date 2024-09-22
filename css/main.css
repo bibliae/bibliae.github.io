@@ -39,6 +39,10 @@ p + p {
     margin: 1em 0;
 }
 
+.projectList li {
+    margin-bottom: 1em;
+}
+
 .projectList a, .projectList.planned li {
     display: block;
     text-decoration: none;

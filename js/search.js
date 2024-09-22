@@ -70,27 +70,26 @@ for (const row of document.querySelectorAll('tr')) {
     if (!cells.length) {
         continue;
     }
-    let content = cells[0].textContent.trim();
+    const content = cells[0].textContent.trim();
     const link = cells[0].querySelector('a');
     if (link) {
-        insert(content, index, [content, link.href]);
+        const bereich = cells[1].textContent.trim();
+        insert(content, index, [content, link.href, bereich]);
     }
 }
 
 searchInput.addEventListener('input', () => {
     requestAnimationFrame(() => {
-        let start = performance.now();
         if (!searchInput.value) {
             searchResultsElement.innerHTML = '';
             return;
         }
         const searchResults = search(searchInput.value, index);
-        console.log(performance.now() - start);
         if (!searchResults.length) {
             searchResultsElement.innerHTML = '<li>Keine Ergebnisse';
         } else {
             searchResultsElement.innerHTML = searchResults.map((result) => {
-                return `<li><a href="${result[1]}" target="_blank">${result[0]}</a></li>`
+                return `<li><a href="${result[1]}" target="_blank">${result[0]} (${result[2]})</a></li>`
             }).join("");
         }
     });

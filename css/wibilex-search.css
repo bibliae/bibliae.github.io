@@ -64,6 +64,10 @@ table tr:hover {
     background-color: rgb(41, 151, 255);
 }
 
+table tr.spacer-bottom:hover, table tr.spacer-top:hover {
+    background-color: transparent;
+}
+
 table tr:hover td {
     color: #fff;
 }
