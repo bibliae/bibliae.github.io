@@ -35,7 +35,9 @@ table {
 }
 
 tr {
-    position: relative;
+    /** Safari doesn't support position: relative on tr elements */
+    transform: translate(0);
+    clip-path: inset(0);
 }
 
 th {
@@ -68,6 +70,15 @@ table tr.spacer-bottom:hover, table tr.spacer-top:hover {
     background-color: transparent;
 }
 
+
+.spacer-top td {
+    height: 2em;
+}
+
+.spacer-top, .spacer-bottom {
+    background-color: transparent !important;
+}
+
 table tr:hover td {
     color: #fff;
 }
@@ -86,7 +97,7 @@ table a::before {
     height: 100%;
 }
 
-input[type=text] {
+input[type=search] {
     border: 1px solid #000;
     width: 100%;
     font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
@@ -95,7 +106,7 @@ input[type=text] {
     outline: none;
 }
 
-input[type=text]:focus {
+input[type=search]:focus {
     outline: 2px solid rgb(41, 151, 255);
 }
 
